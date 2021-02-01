@@ -1,0 +1,187 @@
+<div class="mb-5">
+    <!-- top bannar part start -->
+    <div class="page-heading about-heading header-text">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="text-about row w-100 px-0 mx-0">
+        <!-- <div class="col-12">
+          <h4>about</h4>
+        </div> -->
+        <div class="col-12">
+          <img class="carousel-caption-image" src="assets/images/carousel-rounded-image.jpg" alt="">
+          <p class="intro-p">
+            hello, <span class="text-lowercase">i am </span> 
+            <span class="span-highlight">Ali Alaraby</span>, <span class="text-lowercase">i am </span> a 
+            <span class="span-highlight text-uppercase">mean stack</span> developer
+          </p>
+          <!-- <p class="intro-p">here`s a breif of my skills</p> -->
+          <div class="downArrow bounce">
+            <img width="70" height="70" alt="" src="assets/images/down-arrow-3.png" (click)="scroll(about)" />
+          </div>
+        </div>
+    </div>
+    <!-- top bannar part end -->
+    <!-- about part start -->
+    <div #about class="best-features about-features">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-heading">
+                <h2 id="about-title">About Me</h2>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="right-image about-img">
+                <!-- <img src="assets/images/about2.jpg" class="about-img" style="" alt=""> -->
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="left-content">
+                <h4 class="span-highlight font-weight-bold">Who I Am And What I do ?</h4>
+                <p>
+                    i`m a .NET Full Stack Developer with experience over 1 year in the web developement field, had my degree
+                    in engineering in 2017 computer science deptartment, started my journey in programming since 2015 where the 
+                    field was so shiny and interesting, started learning with c++ then java then after graduation, i started to 
+                    explore the awesome different fields and tracks of programming and as the demand was so rising in the web dev 
+                    field, i jumped right in.  
+                    <br><br>
+                    shortly after graduation, joined a schoolarship in iTi, one of the leading organization in the IT field in Egypt,
+                    finished the 3 months program and got my first job approval just the day i graduated.
+
+                </p>
+                <a href="about.html" class="filled-button">contact me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- about bannar part end -->
+
+    <!-- skills part start -->
+    <div class="mt-5" #componentDiv >
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-12">
+              <div class="section-heading">
+                <h2>Skill Set</h2>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-12 mb-3 text-about">
+                    <h4>Front-End</h4>
+                </div>
+                <div class="row w-100" style="height: 250px;">
+                  <div class="col-lg-4 col-md-6 skill-item text-center" *ngFor="let fItem of frontEndSkillItems">
+                    <ngx-gauge [type]="gaugeType" 
+                      [value]="fItem.percentage" 
+                      [label]="fItem.title"
+                      [cap]="gaugeCap"
+                      [duration]="fItem.animationDuration"
+                      [thick]="gaugeThick"
+                      [foregroundColor]="gaugeForegroundColor"
+                      append="%">
+                    </ngx-gauge>
+                  </div>
+                </div>
+                <div class="col-md-12 mt-5 mb-3 text-about">
+                  <h4>Back-End</h4>
+                </div>
+                <div class="row w-100" style="height: 250px;">
+                  <div class="col-lg-4 col-md-6 skill-item text-center" *ngFor="let fItem of backEndSkillItems">
+                    <ngx-gauge [type]="gaugeType" 
+                      [value]="fItem.percentage" 
+                      [label]="fItem.title"
+                      [cap]="gaugeCap"
+                      [duration]="fItem.animationDuration"
+                      [thick]="gaugeThick"
+                      [foregroundColor]="gaugeForegroundColor"
+                      append="%">
+                    </ngx-gauge>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- skills part end -->
+
+    <!-- reach me part start -->
+    <div class="container text-center mt-5 pt-5" style="border-top: 1px solid #eee;">
+      <a _ngcontent-dni-c129="" href="about.html" class="filled-button">Contact Information</a>
+    </div>
+    <!-- reach me part end -->
+
+
+    <!-- <div class="container">
+      <h4 [className]="dd">hi there</h4>
+    </div> -->
+    <!-- skills part start -->
+    <!-- <div class="mt-5">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-12">
+              <div class="section-heading">
+                <h2>Skill Set</h2>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-12 col-lg-6 text-about">
+                    <h4>Front-End</h4>
+                    <div class="row text-left">
+                      <div class="col-12 skill-item" *ngFor="let fItem of frontEndSkillItems">
+                        <div class="row">
+                          <div class="col-2">
+                            <span class="service-item skill"><i [class]="fItem.fontItem"></i></span>
+                          </div>
+                          <div class="col-9">
+                            <h4>{{fItem.title}}</h4>
+                            <p><ngb-progressbar [showValue]="true" type="info" [value]="fItem.percentage"></ngb-progressbar></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6 text-about">
+                  <h4>Back-End</h4>
+                  <div class="row text-left">
+                    <div class="col-12 skill-item" *ngFor="let bItem of backEndSkillItems">
+                      <div class="row">
+                        <div class="col-2">
+                          <span class="service-item skill"><i [class]="bItem.fontItem"></i></span>
+                        </div>
+                        <div class="col-9">
+                          <h4>{{bItem.title}}</h4>
+                          <p><ngb-progressbar [showValue]="true" type="info" [value]="bItem.percentage"></ngb-progressbar></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="class-md-12">
+              <div class="container">
+                <rg-gauge-chart
+                  [canvasWidth]="canvasWidth"
+                  [needleValue]="needleValue"
+                  [centralLabel]="centralLabel"
+                  [options]="options"
+                  [name]="name"
+                  ></rg-gauge-chart>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div> -->
+    <!-- skills part end -->
+    
+</div>

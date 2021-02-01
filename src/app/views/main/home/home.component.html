@@ -1,0 +1,142 @@
+<div class="mb-5">
+  <app-home-carousel></app-home-carousel>
+  <!-- start about section -->
+  <div class="best-features about-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>In a Nuttshell</h2>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-image">
+              <img src="assets/images/fullstack4.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="left-content">
+              <h4>What the website is &amp; for who ?</h4>
+              <p>
+                  this website is dedicated to help Full Stack web developers, you can consider it as your quick
+                  reference to the basics of web techs (front and back), web developers has so much to keep in mind 
+                  , some knowledge probably slip sometimes, we`re sure about that and we are here to fill that void.
+                  <br><br>
+                  as a full stack developer, i needed to recap whatever i got so far of web techs, so here we go.
+              </p>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <!-- <li><a href="#"><i class="fab fa-behance"></i></a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!-- end about section -->
+  
+  <!-- start recap section -->
+  <div class="products px-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="filters row">
+              <div class="col-3">
+                <h4>Explore Courses</h4>
+              </div>
+              <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-recap col-8">
+                <li [ngbNavItem]="1">
+                  <a ngbNavLink class="recap-nav-link" (click)="onTabChange($event)">All</a>
+                  <ng-template ngbNavContent>
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 all des" *ngFor="let item of filteredLessonCardItems">
+                            <div class="product-item">
+                              <a href="#"><img src="assets/images/fullstack4.png" alt=""></a>
+                              <div class="down-content">
+                                <a href="#"><h4>{{item.title}}</h4></a>
+                                <ng-container *ngIf="item.tag > 0; else elseTemplate">
+                                  <h6>Back-End</h6>
+                                </ng-container>
+                                <ng-template #elseTemplate>
+                                  <h6>Front-End</h6>
+                                </ng-template>
+                                <p>{{item.title}}</p>
+                                <a [routerLink]="item.references[0]" class="filled-button">Read More</a>
+                              </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                  <a ngbNavLink class="recap-nav-link" (click)="onTabChange($event)">Front End</a>
+                  <ng-template ngbNavContent>
+                    <div class="row">
+
+                      <div class="col-lg-4 col-md-6 col-sm-12 all des" *ngFor="let item of filteredLessonCardItems">
+                          <div class="product-item">
+                            <a href="#"><img src="assets/images/fullstack4.png" alt=""></a>
+                            <div class="down-content">
+                              <a href="#"><h4>{{item.title}}</h4></a>
+                              <ng-container *ngIf="item.tag > 0; else elseTemplate">
+                                <h6>Back-End</h6>
+                              </ng-container>
+                              <ng-template #elseTemplate>
+                                <h6>Front-End</h6>
+                              </ng-template>
+                              
+                              <p>{{item.title}}</p>
+                              <a [routerLink]="item.references[0]" class="filled-button">Read More</a>
+                            </div>
+                          </div>
+                      </div>
+                      
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="3">
+                  <a ngbNavLink class="recap-nav-link" (click)="onTabChange($event)">Back End</a>
+                  <ng-template ngbNavContent>
+                    <div class="row">
+                      
+                      <div class="col-lg-4 col-md-6 col-sm-12 all des" *ngFor="let item of filteredLessonCardItems">
+                          <div class="product-item">
+                            <a href="#"><img src="assets/images/fullstack4.png" alt=""></a>
+                            <div class="down-content">
+                              <a href="#"><h4>{{item.title}}</h4></a>
+                              <ng-container *ngIf="item.tag > 0; else elseTemplate">
+                                <h6>Back-End</h6>
+                              </ng-container>
+                              <ng-template #elseTemplate>
+                                <h6>Front-End</h6>
+                              </ng-template>
+                              
+                              <p>{{item.title}}</p>
+                              <a [routerLink]="item.references[0]" class="filled-button">Read More</a>
+                            </div>
+                          </div>
+                      </div>
+
+                    </div>
+                  </ng-template>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="filters-content">
+              <div class="row grid">
+                <div [ngbNavOutlet]="nav" class="mt-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- end recap section -->
+  
+</div>
