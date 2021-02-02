@@ -9,6 +9,19 @@ import { Tags } from 'src/app/shared/models/tag-enum';
 })
 export class AboutComponent implements OnInit {
 
+  skillCards = [
+    { src: 'assets/images/skills/css.png', name: 'CSS 3' },
+    { src: 'assets/images/skills/html.png', name: 'HTML 5' },
+    { src: 'assets/images/skills/device.png', name: 'Responsive Design' },
+    { src: 'assets/images/skills/javascript.png', name: 'Javascript' },
+    { src: 'assets/images/skills/typescript.png', name: 'Typescript' },
+    { src: 'assets/images/skills/angular.png', name: 'Angular' },
+    { src: 'assets/images/skills/nodejs.png', name: 'Node.js' },
+    { src: 'assets/images/skills/mongodb-2.png', name: 'MongoDB' },
+    { src: 'assets/images/skills/linux.png', name: 'Linux' },
+    { src: 'assets/images/skills/digitalocean.png', name: 'Deployment' },
+  ]
+
   skillItems = [
     new SkillModel('HTML', 70, 'fab fa-html5', Tags.Front_End, 1500),
     new SkillModel('CSS', 70, 'fab fa-css3', Tags.Front_End, 1000),
@@ -17,17 +30,7 @@ export class AboutComponent implements OnInit {
     new SkillModel('MVC', 70, 'fab fa-css3', Tags.Back_End, 2000)
   ]
   frontEndSkillItems: SkillModel[] = [];
-  backEndSkillItems: SkillModel[] = []
-
-  // frontEndSkillItems: SkillModel[] = [
-  //   new SkillModel('HTML', 70, 'fab fa-html5', Tags.Front_End, 1500),
-  //   new SkillModel('CSS', 70, 'fab fa-css3', Tags.Front_End, 1000),
-  //   new SkillModel('Bootstrap', 70, 'fab fa-html5', Tags.Front_End, 750)
-  // ];
-  // backEndSkillItems: SkillModel[] = [
-  //   new SkillModel('C#', 70, 'fab fa-html5', Tags.Back_End, 1250),
-  //   new SkillModel('MVC', 70, 'fab fa-css3', Tags.Back_End, 2000)
-  // ];
+  backEndSkillItems: SkillModel[] = [];
 
   //gauge chart settings
   gaugeType = "semi";

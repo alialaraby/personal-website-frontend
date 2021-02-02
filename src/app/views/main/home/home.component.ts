@@ -26,7 +26,6 @@ export class HomeComponent implements OnInit {
   //filters the learning cards in the home page
   onTabChange(event: any){
     this.filteredLessonCardItems = this.lessonCardItems;
-    debugger
     let tabText = event.target.text as string;
     let tag: Tags;
     if(tabText.includes('front') || tabText.includes('Front'))

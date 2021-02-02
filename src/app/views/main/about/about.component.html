@@ -13,15 +13,15 @@
           <h4>about</h4>
         </div> -->
         <div class="col-12">
-          <img class="carousel-caption-image" src="assets/images/carousel-rounded-image.jpg" alt="">
+          <img class="custom-rounded-image" src="assets/images/carousel-rounded-image.jpg" alt="">
           <p class="intro-p">
             hello, <span class="text-lowercase">i am </span> 
-            <span class="span-highlight">Ali Alaraby</span>, <span class="text-lowercase">i am </span> a 
-            <span class="span-highlight text-uppercase">mean stack</span> developer
+            <span class="text-secondary-red">Ali Alaraby</span>, <span class="text-lowercase">i am </span> a 
+            <span class="text-secondary-red text-uppercase">mean stack</span> developer
           </p>
           <!-- <p class="intro-p">here`s a breif of my skills</p> -->
           <div class="downArrow bounce">
-            <img width="70" height="70" alt="" src="assets/images/down-arrow-3.png" (click)="scroll(about)" />
+            <img width="70" height="70" alt="" src="assets/images/down-arrow-dark.png" (click)="scroll(about)" />
           </div>
         </div>
     </div>
@@ -42,19 +42,18 @@
             </div>
             <div class="col-md-6">
               <div class="left-content">
-                <h4 class="span-highlight font-weight-bold">Who I Am And What I do ?</h4>
+                <h4 class="text-secondary-red font-weight-bold">Who I Am And What I do ?</h4>
                 <p>
-                    i`m a .NET Full Stack Developer with experience over 1 year in the web developement field, had my degree
-                    in engineering in 2017 computer science deptartment, started my journey in programming since 2015 where the 
-                    field was so shiny and interesting, started learning with c++ then java then after graduation, i started to 
-                    explore the awesome different fields and tracks of programming and as the demand was so rising in the web dev 
-                    field, i jumped right in.  
-                    <br><br>
-                    shortly after graduation, joined a schoolarship in iTi, one of the leading organization in the IT field in Egypt,
-                    finished the 3 months program and got my first job approval just the day i graduated.
-
+                  i`m a MEAN Stack And a Former .NET Full Stack Developer with experience over 3 year in the web developement field, had my degree
+                  in engineering in 2017 computer science deptartment, started my journey in programming since 2015 where the 
+                  field was so shiny and interesting, started learning with c++ then java, C# then after graduation, i started to 
+                  explore the awesome different fields and tracks of programming and as the demand was so rising in the web dev 
+                  field, i jumped right in.  
+                  <br><br>
+                  shortly after graduation, joined a schoolarship in iTi, one of the leading organization in the IT field in Egypt,
+                  finished the 3 months program and got my first job approval just the day i graduated.
                 </p>
-                <a href="about.html" class="filled-button">contact me</a>
+                <a routerLink="/main/coming-soon" class="filled-button">know more</a>
               </div>
             </div>
           </div>
@@ -62,61 +61,98 @@
     </div>
     <!-- about bannar part end -->
 
-    <!-- skills part start -->
-    <div class="mt-5" #componentDiv >
-        <div class="container">
-          <div class="row w-100">
-            <div class="col-md-12">
-              <div class="section-heading">
-                <h2>Skill Set</h2>
-              </div>
+    <!-- what i do part start -->
+    <div class="mt-5 what-i-do">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2 id="about-title">About My Skills</h2>
             </div>
-            <div class="col-md-12">
-              <div class="row">
-                <div class="col-md-12 mb-3 text-about">
-                    <h4>Front-End</h4>
-                </div>
-                <div class="row w-100" style="height: 250px;">
-                  <div class="col-lg-4 col-md-6 skill-item text-center" *ngFor="let fItem of frontEndSkillItems">
-                    <ngx-gauge [type]="gaugeType" 
-                      [value]="fItem.percentage" 
-                      [label]="fItem.title"
-                      [cap]="gaugeCap"
-                      [duration]="fItem.animationDuration"
-                      [thick]="gaugeThick"
-                      [foregroundColor]="gaugeForegroundColor"
-                      append="%">
-                    </ngx-gauge>
-                  </div>
-                </div>
-                <div class="col-md-12 mt-5 mb-3 text-about">
-                  <h4>Back-End</h4>
-                </div>
-                <div class="row w-100" style="height: 250px;">
-                  <div class="col-lg-4 col-md-6 skill-item text-center" *ngFor="let fItem of backEndSkillItems">
-                    <ngx-gauge [type]="gaugeType" 
-                      [value]="fItem.percentage" 
-                      [label]="fItem.title"
-                      [cap]="gaugeCap"
-                      [duration]="fItem.animationDuration"
-                      [thick]="gaugeThick"
-                      [foregroundColor]="gaugeForegroundColor"
-                      append="%">
-                    </ngx-gauge>
+          </div>
+          <div class="col-md-12">
+            <p class="px-5 text-20">
+              i`m a MEAN Stack And a Former .NET Full Stack Developer with experience over 3 year in the web developement field, had my degree
+              in engineering in 2017 computer science deptartment, started my journey in programming since 2015 where the 
+              field was so shiny and interesting, started learning with c++ then java, C# then after graduation, i started to 
+              explore the awesome different fields and tracks of programming and as the demand was so rising in the web dev 
+              field, i jumped right in.
+            </p>
+          </div>
+          <div class="col-md-12">
+            <div class="row w-100 mt-2 p-2">
+              <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let skillCard of skillCards">
+                <div class="card card-icon-big hvr-underline-from-center mb-4">
+                  <div class="card-body text-center">
+                    <img  [src]="skillCard.src" alt="">
+                    <p class="lead text-18 mt-2 mb-0">
+                      {{ skillCard.name }}
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    </div>
-    <!-- skills part end -->
+      </div>
+  </div>
+  <!-- what i do part end -->
 
-    <!-- reach me part start -->
-    <div class="container text-center mt-5 pt-5" style="border-top: 1px solid #eee;">
-      <a _ngcontent-dni-c129="" href="about.html" class="filled-button">Contact Information</a>
-    </div>
-    <!-- reach me part end -->
+  <!-- skills part start -->
+  <!-- <div class="mt-5" #componentDiv >
+      <div class="container">
+        <div class="row w-100">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Skill Set</h2>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12 mb-3 text-about">
+                  <h4>Front-End</h4>
+              </div>
+              <div class="row w-100" style="height: 250px;">
+                <div class="col-lg-4 col-md-6 skill-item text-center" *ngFor="let fItem of frontEndSkillItems">
+                  <ngx-gauge [type]="gaugeType" 
+                    [value]="fItem.percentage" 
+                    [label]="fItem.title"
+                    [cap]="gaugeCap"
+                    [duration]="fItem.animationDuration"
+                    [thick]="gaugeThick"
+                    [foregroundColor]="gaugeForegroundColor"
+                    append="%">
+                  </ngx-gauge>
+                </div>
+              </div>
+              <div class="col-md-12 mt-5 mb-3 text-about">
+                <h4>Back-End</h4>
+              </div>
+              <div class="row w-100" style="height: 250px;">
+                <div class="col-lg-4 col-md-6 skill-item text-center" *ngFor="let fItem of backEndSkillItems">
+                  <ngx-gauge [type]="gaugeType" 
+                    [value]="fItem.percentage" 
+                    [label]="fItem.title"
+                    [cap]="gaugeCap"
+                    [duration]="fItem.animationDuration"
+                    [thick]="gaugeThick"
+                    [foregroundColor]="gaugeForegroundColor"
+                    append="%">
+                  </ngx-gauge>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div> -->
+  <!-- skills part end -->
+
+  <!-- reach me part start -->
+  <div class="container text-center mt-5 pt-5" style="border-top: 1px solid #eee;">
+    <a routerLink="/main/contact" class="filled-button">Contact Me</a>
+  </div>
+  <!-- reach me part end -->
 
 
     <!-- <div class="container">

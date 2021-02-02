@@ -18,7 +18,7 @@ const learningLayoutRoutes: Routes = [
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'main/home',
+    redirectTo: 'main/about',
     pathMatch: 'full'
   },
   {

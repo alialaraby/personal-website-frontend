@@ -10,11 +10,66 @@
     </div>
     <div class="text-about text-contact row w-100 px-0 mx-0">
         <div class="col-12">
-            <h4>Contact</h4>
+            <h4>Contacts</h4>
         </div>
         <div class="col-12">
-            <p>Social &amp; Other Contacts</p>
+            <!-- <p>E-mail, Social &amp; Other Contacts</p> -->
+            <p>let me hear your thoughts</p>
         </div>
+        <div class="col-12 downArrow bounce">
+            <img width="70" height="70" alt="" src="assets/images/down-arrow-light.png" (click)="scroll(contacts)" />
+          </div>
     </div>
     <!-- top bannar part end -->
+</div>
+<div class="container contacts-container" #contacts>
+    <div class="row w-100">
+        <div class="col-md-12">
+            <h4 class="mb-4 text-secondary-red">have a question, want to hire me or just want to chat ?</h4>
+            <p>i <span class="text-lowercase">`d</span> be very happy to hear from you</p>
+        </div>
+        <div class="col-lg-8 col-md-6 col-sm-12">
+            <form [formGroup]="emailForm" class="my-5" (ngSubmit)="Submit()">
+                <div class="row px-3">
+                    <div class="col-12 form-group my-3 text-capitalize">
+                        <input autocomplete="off" type="text" class="form-control" #email
+                        id="email" placeholder="Enter Your email" formControlName="email">
+                        
+                        <div *ngIf="showErrors && emailForm.controls['email'].invalid"
+                            class="text-danger font-weight-bold">
+                            Email is Required
+                        </div>
+                    </div>
+                    <div class="col-12 form-group my-3 text-capitalize">
+                        <input autocomplete="off" type="text" class="form-control" #name
+                        id="name" placeholder="Enter Your Name" formControlName="name">
+                        
+                        <div *ngIf="showErrors && emailForm.controls['name'].invalid"
+                            class="text-danger font-weight-bold">
+                            Name is Required
+                        </div>
+                    </div>
+                    <div class="col-12 form-group my-3 text-capitalize">
+                        <!-- <input autocomplete="off" type="" class="form-control" #message
+                        id="message" placeholder="Tell Me Something" formControlName="message"> -->
+
+                        <textarea class="form-control" formControlName="message" id="message" 
+                            #message cols="20" rows="10" placeholder="Tell Me Something">
+                        </textarea>
+
+                        <div *ngIf="showErrors && emailForm.controls['message'].invalid"
+                            class="text-danger font-weight-bold">
+                            Message is Required
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-3">
+                    <a href="#" class="filled-button ml-3">Submit</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            
+        </div>
+    </div>
 </div>

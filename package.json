@@ -27,6 +27,7 @@
     "angular-gauge": "^3.1.2",
     "angular-gauge-chart": "^0.7.2",
     "bootstrap": "^4.4.1",
+    "hover.css": "^2.3.2",
     "jquery": "^3.4.1",
     "ngx-gauge": "^1.1.0",
     "popper": "^1.0.1",

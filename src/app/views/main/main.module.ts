@@ -10,16 +10,19 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GaugeChartModule } from 'angular-gauge-chart';
 import { GaugeModule } from 'angular-gauge';
 import { NgxGaugeModule } from 'ngx-gauge';
+import { CommingSoonComponent } from './comming-soon/comming-soon.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, ContactComponent, HomeCarouselComponent],
+  declarations: [HomeComponent, AboutComponent, ContactComponent, HomeCarouselComponent, CommingSoonComponent],
   imports: [
     CommonModule,
     MainRoutingModule,
     NgbModule,
     GaugeChartModule,
     GaugeModule.forRoot(),
-    NgxGaugeModule
+    NgxGaugeModule,
+    ReactiveFormsModule
   ]
 })
 export class MainModule { }

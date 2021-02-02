@@ -11,6 +11,7 @@ export class MainNavbarComponent implements OnInit {
     "/main/home",
     "/main/about",
     "/main/contact",
+    "/main/coming-soon",
   ]
 
   constructor() { }

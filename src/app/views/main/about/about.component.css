@@ -5,13 +5,6 @@
 .text-about{
     top: 5% !important;
 }
-.carousel-caption-image{
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 30px;
-}
 .intro-p{
     text-transform: capitalize;
     color: black !important;
@@ -20,66 +13,39 @@
     letter-spacing: 1px;
     font-size: 35px !important;
 }
-.span-highlight{
-    color: #f33f3f !important;
-}
-.downArrow.bounce{
-    margin-top: 60px;
-}
-.downArrow.bounce img{
-    cursor: pointer;
-}
-.bounce {
-	-moz-animation: bounce 3s infinite;
-	-webkit-animation: bounce 3s infinite;
-	animation: bounce 3s infinite;
-}
 
-@-moz-keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      -moz-transform: translateY(0);
-      transform: translateY(0);
+  @media (max-width: 768px){
+    .about-heading.page-heading{
+      height: 645px;
     }
-    40% {
-      -moz-transform: translateY(-30px);
-      transform: translateY(-30px);
+    .text-about{
+      top: 2% !important;
     }
-    60% {
-      -moz-transform: translateY(-15px);
-      transform: translateY(-15px);
+    .intro-p{
+      font-size: 30px !important;
+      padding-left: 25px;
+      padding-right: 25px;
     }
-  }
-  @-webkit-keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-    40% {
-      -webkit-transform: translateY(-30px);
-      transform: translateY(-30px);
-    }
-    60% {
-      -webkit-transform: translateY(-15px);
-      transform: translateY(-15px);
+    .best-features h4{
+      margin-top: 20px;
     }
   }
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-    40% {
-      -moz-transform: translateY(-30px);
-      -ms-transform: translateY(-30px);
-      -webkit-transform: translateY(-30px);
-      transform: translateY(-30px);
-    }
-    60% {
-      -moz-transform: translateY(-15px);
-      -ms-transform: translateY(-15px);
-      -webkit-transform: translateY(-15px);
-      transform: translateY(-15px);
-    }
-  }
+
+.what-i-do p{
+  font-size: 17px;
+  font-weight: 400;
+}
+.about-features p{
+  font-weight: 400 !important;
+}
+.card{
+  border-radius: 10px;
+  box-shadow: 0 4px 20px 1px rgb(0 0 0 / 8%), 0 1px 4px rgb(0 0 0 / 10%);
+  border: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: #fff;
+  background-clip: border-box;
+}
