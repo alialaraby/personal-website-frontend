@@ -64,35 +64,40 @@
     <!-- what i do part start -->
     <div class="mt-5 what-i-do">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2 id="about-title">About My Skills</h2>
-            </div>
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2 id="about-title">About My Skills</h2>
           </div>
-          <div class="col-md-12">
-            <p class="px-5 text-20">
-              i`m a MEAN Stack And a Former .NET Full Stack Developer with experience over 3 year in the web developement field, had my degree
-              in engineering in 2017 computer science deptartment, started my journey in programming since 2015 where the 
-              field was so shiny and interesting, started learning with c++ then java, C# then after graduation, i started to 
-              explore the awesome different fields and tracks of programming and as the demand was so rising in the web dev 
-              field, i jumped right in.
-            </p>
-          </div>
-          <div class="col-md-12">
-            <div class="row w-100 mt-2 p-2">
-              <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let skillCard of skillCards">
-                <div class="card card-icon-big hvr-underline-from-center mb-4">
-                  <div class="card-body text-center">
-                    <img  [src]="skillCard.src" alt="">
-                    <p class="lead text-18 mt-2 mb-0">
-                      {{ skillCard.name }}
-                    </p>
-                  </div>
+        </div>
+        
+        <div class="col-md-12">
+          <p class="px-5 text-20">
+            here are just some of the skills and technologies i mastered over the years and you can 
+            find everything else in details in my resume linked below. i was also responsible for leading a couple of projects 
+            with a couple of different teams and took part of all aspects of almost all the project i have worked on.  
+          </p>
+        </div>
+
+        <div class="col-md-12">
+          <div class="row w-100 mt-2 p-2">
+            <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let skillCard of skillCards">
+              <div class="card card-icon-big hvr-underline-from-center mb-4">
+                <div class="card-body text-center">
+                  <img  [src]="skillCard.src" alt="">
+                  <p class="lead text-18 mt-2 mb-0">
+                    {{ skillCard.name }}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="col-md-12 my-3 text-center">
+          <p class="get-my-cv-p">get my pdf resume</p>
+          <a download href="assets/resume.pdf" class="filled-button my-5">Get Resume</a>
+          <span class="d-inline-block mx-3">or</span>
+          <a routerLink="/main/contact" class="filled-button">Contact Me</a>
         </div>
       </div>
   </div>
@@ -149,9 +154,9 @@
   <!-- skills part end -->
 
   <!-- reach me part start -->
-  <div class="container text-center mt-5 pt-5" style="border-top: 1px solid #eee;">
+  <!-- <div class="container text-center mt-5 pt-5" style="border-top: 1px solid #eee;">
     <a routerLink="/main/contact" class="filled-button">Contact Me</a>
-  </div>
+  </div> -->
   <!-- reach me part end -->
 
 

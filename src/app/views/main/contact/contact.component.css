@@ -12,6 +12,35 @@ input[type="text"]:focus, textarea:focus{
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #4a4a4a;
     outline: 0 none;
 }
+.invalid-input{
+    border-color: #f33f3f;
+    /* box-shadow: 0 1px 1px 1px #f33f3f inset, 0 1 4px #f78d8d !important; */
+    box-shadow: 0 0 10px #f33f3f;
+    outline: 0 none !important;
+}
 .text-about.text-contact{
     top: 15%;
+}
+.card{
+    border-radius: 10px;
+    box-shadow: 0 4px 20px 1px rgb(0 0 0 / 8%), 0 1px 4px rgb(0 0 0 / 10%);
+    border: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+    background-clip: border-box;
+}
+.social-card{
+    cursor: pointer;
+}
+.social-card p{
+    color: unset !important;
+}
+.facebook{
+    color: #4460A0 !important;
+}
+.linkedin{
+    color: #117EB8 !important;
 }

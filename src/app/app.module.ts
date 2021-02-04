@@ -8,6 +8,7 @@ import {MatSliderModule} from '@angular/material/slider';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { MainLayoutModule } from './shared/main-layout/main-layout.module';
 import { LearningLayoutModule } from './shared/learning-layout/learning-layout.module';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LearningLayoutModule } from './shared/learning-layout/learning-layout.m
     MatSliderModule,
     NgbModule,
     MainLayoutModule,
-    LearningLayoutModule
+    LearningLayoutModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

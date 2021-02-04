@@ -18,6 +18,9 @@ export class AboutComponent implements OnInit {
     { src: 'assets/images/skills/angular.png', name: 'Angular' },
     { src: 'assets/images/skills/nodejs.png', name: 'Node.js' },
     { src: 'assets/images/skills/mongodb-2.png', name: 'MongoDB' },
+    { src: 'assets/images/skills/c-sharp.png', name: 'C#' },
+    { src: 'assets/images/skills/dot-net.png', name: 'ASP.Net' },
+    { src: 'assets/images/skills/microsoft-sql-server.png', name: 'MS SQL Server' },
     { src: 'assets/images/skills/linux.png', name: 'Linux' },
     { src: 'assets/images/skills/digitalocean.png', name: 'Deployment' },
   ]

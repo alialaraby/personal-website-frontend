@@ -12,6 +12,7 @@ import { GaugeModule } from 'angular-gauge';
 import { NgxGaugeModule } from 'ngx-gauge';
 import { CommingSoonComponent } from './comming-soon/comming-soon.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [HomeComponent, AboutComponent, ContactComponent, HomeCarouselComponent, CommingSoonComponent],
@@ -19,10 +20,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     MainRoutingModule,
     NgbModule,
+    HttpClientModule,
     GaugeChartModule,
     GaugeModule.forRoot(),
     NgxGaugeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class MainModule { }
