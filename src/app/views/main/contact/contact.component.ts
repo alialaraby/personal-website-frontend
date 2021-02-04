@@ -51,7 +51,7 @@ export class ContactComponent implements OnInit {
         email: this.emailForm.get('email').value,
         message: this.emailForm.get('message').value,
       }
-      this.http.post('http://178.128.157.177:2500/send', body).toPromise()
+      this.http.post('https://ali-alaraby-backend.herokuapp.com/send', body).toPromise()
       .then(res => {
         console.log(res);
         this.emailForm.reset();
