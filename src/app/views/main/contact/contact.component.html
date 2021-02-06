@@ -1,4 +1,4 @@
-<div class="mb-5">
+<div class="child-container">
     <!-- top bannar part start -->
     <div class="page-heading about-heading header-text">
         <div class="container">
@@ -23,34 +23,30 @@
     <!-- top bannar part end -->
 </div>
 <div class="container contacts-container" #contacts>
-    <div class="row w-100">
-        <div class="col-md-12" style="margin-bottom: 120px;">
+    <div class="row">
+        <div class="col-md-12" style="margin-bottom: 90px;">
             <h4 class="mb-4 text-secondary-red">have a question, want to hire me or just want to chat ?</h4>
             <p>i <span class="text-lowercase">`d</span> be very happy to hear from you</p>
         </div>
-        <div class="col-lg-8 col-md-6 col-sm-12">
+        <div class="col-lg-8 col-md-6 col-sm-12" data-aos="fade-right" data-aos-duration="1000">
             <p class="text-center">Send Me An Email</p>
             <form [formGroup]="emailForm" class="my-3">
                 <div class="row px-3">
                     <div class="col-12 form-group my-3 text-capitalize">
                         <input autocomplete="off" type="text" class="form-control" #email
-                        [ngClass]="{'invalid-input': emailForm.controls['email'].invalid && showErrors}"
+                        [ngClass]="{'invalid-input': (emailForm.controls['email'].invalid && showErrors) || (emailForm.controls['email'].touched && invalidEmail)}"
+                        (keyup)="CheckEmail($event.target.value)"
                         id="email" placeholder="Enter Your email" formControlName="email">
                         
-                        <!-- <div *ngIf="showErrors && emailForm.controls['email'].invalid"
+                        <div *ngIf="invalidEmail"
                             class="text-danger font-weight-bold">
-                            Email is Required
-                        </div> -->
+                            Invalid Email <span class="text-lowercase">"example@gmail.com"</span>
+                        </div>
                     </div>
                     <div class="col-12 form-group my-3 text-capitalize">
                         <input autocomplete="off" type="text" class="form-control" #name
                         [ngClass]="{'invalid-input': emailForm.controls['name'].invalid && showErrors}"
                         id="name" placeholder="Enter Your Name" formControlName="name">
-                        
-                        <!-- <div *ngIf="showErrors && emailForm.controls['name'].invalid"
-                            class="text-danger font-weight-bold">
-                            Name is Required
-                        </div> -->
                     </div>
                     <div class="col-12 form-group my-3 text-capitalize">
                         <!-- <input autocomplete="off" type="" class="form-control" #message
@@ -68,12 +64,12 @@
                     </div>
                 </div>
                 <div class="row px-3">
-                    <button class="btn btn-danger ml-3" [textContent]="sending ? 'Sending ...' : 'Submit'" (click)="Submit()">submit</button>
+                    <button class="btn btn-danger ml-3" [textContent]="sending ? 'Sending ...' : 'Send'" (click)="Submit()"></button>
                     <span class="text-danger font-weight-bold mt-2 ml-2" *ngIf="emailForm.invalid && showErrors"> * Please Fill In The Glowing Fields</span>
                 </div>
             </form>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-left" data-aos-duration="1000">
             <p class="text-center">Or Let <span class="text-lowercase">`s</span> Socialize</p>
             <div class="row w-100 mx-auto" style="margin-top: 33px;">
                 <div class="col-12">

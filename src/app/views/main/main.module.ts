@@ -13,9 +13,10 @@ import { NgxGaugeModule } from 'ngx-gauge';
 import { CommingSoonComponent } from './comming-soon/comming-soon.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, ContactComponent, HomeCarouselComponent, CommingSoonComponent],
+  declarations: [HomeComponent, AboutComponent, ContactComponent, HomeCarouselComponent, CommingSoonComponent, ProjectsComponent],
   imports: [
     CommonModule,
     MainRoutingModule,

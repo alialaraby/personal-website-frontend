@@ -1,0 +1,68 @@
+<div class="child-container">
+    <div class="head header-text">
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="https://cdn.videvo.net/videvo_files/video/free/2016-12/small_watermarked/Typing_dark_03_Videvo_preview.webm" type="video/mp4">
+            <!-- <source src="https://cdn.videvo.net/videvo_files/video/free/2016-04/small_watermarked/160330_4_Typing3_Mpeg4_4K_preview.webm" type="video/mp4"> -->
+        </video>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <div class="col-12">
+                        <img class="custom-rounded-image" 
+                        data-aos="fade-down" data-aos-duration="1000"
+                        src="assets/images/carousel-rounded-image.jpg" alt="">
+                    </div>
+                    <p class="intro-p" data-aos="fade-down" data-aos-duration="1000">
+                        <!-- hello, <span class="text-lowercase">i am </span> 
+                        <span class="text-secondary-red">Ali Alaraby</span>, <span class="text-lowercase">i am </span> a 
+                        <span class="text-secondary-red text-uppercase">mean stack</span> developer -->
+                        here are some of the <span class="text-secondary-red">Projects</span> i worked on 
+                      </p>
+                    <div class="downArrow bounce">
+                      <img width="70" height="70" alt="" src="assets/images/down-arrow-light.png" (click)="scroll(timeline)"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                
+                <div class="timeline" #timeline>
+                    <div class="timeline-container" *ngFor="let project of projects; let i = index" 
+                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+                    [ngClass]="{'left': i % 2 == 0, 'right': i % 2 != 0}">
+                        <div class="content">
+                            <div class="mb-1">
+                                <strong class="mr-1">{{ project.name }}</strong> <span class="text-muted">{{ project.shortDescription }}</span> 
+                                <p class="text-secondary-red font-weight-bold">{{ project.date }}</p>
+                            </div>
+                            <div class="timeline-image-container">
+                                <img [src]="project.imgSrc" class="timeline-content-image image" alt="">
+                                <div class="middle">
+                                    <ng-container *ngIf="project.link; else elseTemplate">
+                                        <a [href]="project.link" target="_blank" class="filled-button my-5">
+                                            More Details
+                                        </a>
+                                    </ng-container>
+                                    <ng-template #elseTemplate>
+                                        <span class="filled-button my-5 text-secondary-red font-weight-bold">Link Comming Soon ...</span>
+                                    </ng-template>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="timeline-container right" style="visibility: hidden; margin-top: -200px;">
+                        <div class="content">
+                            <h2>2016</h2>
+                            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>

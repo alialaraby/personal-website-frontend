@@ -219,7 +219,7 @@ header {
 	z-index: 99999;
 	width: 100%;
 	height: 80px;
-	background-color: #232323;
+	background-color: transparent;
 	-webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     -o-transition: all 0.3s ease-in-out 0s;
@@ -1009,6 +1009,12 @@ footer .inner-content p a {
 		margin-top: 30px;
 		margin-left: 0px;
 	}
+	.text-about.text-contact{
+		top: 9% !important;
+	}
+	.about-heading.page-heading{
+		height: 785px !important;
+	}
 }
 
 @media (max-width: 992px) {
@@ -1213,3 +1219,56 @@ footer .inner-content p a {
 .text-secondary-red{
     color: #f33f3f !important;
 }
+
+/* video header */
+.head {
+    position: relative;
+    background-color: black;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    margin-left: unset !important;
+}
+.head video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.head .container {
+    position: relative;
+    z-index: 2;
+}
+.head .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+.child-container{
+    margin-top: -80px;
+}
+.intro-p{
+    text-transform: capitalize;
+    color: white !important;
+    padding-left: 70px;
+    padding-right: 70px;
+    letter-spacing: 1px;
+    font-size: 35px !important;
+    line-height: 1.2;
+    font-weight: bold;
+}
+/* video header */

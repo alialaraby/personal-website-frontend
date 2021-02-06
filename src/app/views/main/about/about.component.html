@@ -1,31 +1,32 @@
-<div class="mb-5">
-    <!-- top bannar part start -->
-    <div class="page-heading about-heading header-text">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-            </div>
+<div class="child-container">
+  <div class="head header-text">
+      <div class="overlay"></div>
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src="https://cdn.videvo.net/videvo_files/video/free/2016-12/small_watermarked/Typing_dark_03_Videvo_preview.webm" type="video/mp4">
+          <!-- <source src="https://cdn.videvo.net/videvo_files/video/free/2016-04/small_watermarked/160330_4_Typing3_Mpeg4_4K_preview.webm" type="video/mp4"> -->
+      </video>
+      <div class="container h-100">
+          <div class="d-flex h-100 text-center align-items-center">
+              <div class="w-100 text-white">
+                  <div class="col-12">
+                      <img class="custom-rounded-image" 
+                      data-aos="fade-down" data-aos-duration="1000"
+                      src="assets/images/carousel-rounded-image.jpg" alt="">
+                  </div>
+                  <p class="intro-p" data-aos="fade-down" data-aos-duration="1000">
+                      hello, <span class="text-lowercase">i am </span> 
+                      <span class="text-secondary-red">Ali Alaraby</span>, <span class="text-lowercase">i am </span> a 
+                      <span class="text-secondary-red text-uppercase">mean stack</span> developer
+                    </p>
+                  <div class="downArrow bounce">
+                    <img width="70" height="70" alt="" src="assets/images/down-arrow-light.png" (click)="scroll(about)"/>
+                  </div>
+              </div>
           </div>
-        </div>
-    </div>
-    <div class="text-about row w-100 px-0 mx-0">
-        <!-- <div class="col-12">
-          <h4>about</h4>
-        </div> -->
-        <div class="col-12">
-          <img class="custom-rounded-image" src="assets/images/carousel-rounded-image.jpg" alt="">
-          <p class="intro-p">
-            hello, <span class="text-lowercase">i am </span> 
-            <span class="text-secondary-red">Ali Alaraby</span>, <span class="text-lowercase">i am </span> a 
-            <span class="text-secondary-red text-uppercase">mean stack</span> developer
-          </p>
-          <!-- <p class="intro-p">here`s a breif of my skills</p> -->
-          <div class="downArrow bounce">
-            <img width="70" height="70" alt="" src="assets/images/down-arrow-dark.png" (click)="scroll(about)" />
-          </div>
-        </div>
-    </div>
-    <!-- top bannar part end -->
+      </div>
+  </div>
+</div>
+<div class="mb-5" style="margin-top: -50px;">
     <!-- about part start -->
     <div #about class="best-features about-features">
         <div class="container">
@@ -35,12 +36,12 @@
                 <h2 id="about-title">About Me</h2>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
               <div class="right-image about-img">
                 <!-- <img src="assets/images/about2.jpg" class="about-img" style="" alt=""> -->
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
               <div class="left-content">
                 <h4 class="text-secondary-red font-weight-bold">Who I Am And What I do ?</h4>
                 <p>
@@ -53,7 +54,7 @@
                   shortly after graduation, joined a schoolarship in iTi, one of the leading organization in the IT field in Egypt,
                   finished the 3 months program and got my first job approval just the day i graduated.
                 </p>
-                <a routerLink="/main/coming-soon" class="filled-button">know more</a>
+                <a routerLink="/main/projects" class="filled-button">know more</a>
               </div>
             </div>
           </div>
@@ -79,8 +80,9 @@
         </div>
 
         <div class="col-md-12">
-          <div class="row w-100 mt-2 p-2">
-            <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let skillCard of skillCards">
+          <div class="row mt-2 p-2">
+            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000" 
+            *ngFor="let skillCard of skillCards">
               <div class="card card-icon-big hvr-underline-from-center mb-4">
                 <div class="card-body text-center">
                   <img  [src]="skillCard.src" alt="">
@@ -95,9 +97,13 @@
 
         <div class="col-md-12 my-3 text-center">
           <p class="get-my-cv-p">get my pdf resume</p>
-          <a download href="assets/resume.pdf" class="filled-button my-5">Get Resume</a>
+          <a download href="assets/resume.pdf" class="filled-button my-5" data-aos="fade-right" data-aos-duration="1000">
+            Get Resume
+          </a>
           <span class="d-inline-block mx-3">or</span>
-          <a routerLink="/main/contact" class="filled-button">Contact Me</a>
+          <a routerLink="/main/contact" class="filled-button" data-aos="fade-left" data-aos-duration="1000">
+            Contact Me
+          </a>
         </div>
       </div>
   </div>

@@ -5,7 +5,7 @@ import { Tags } from 'src/app/shared/models/tag-enum';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.css'],
 })
 export class AboutComponent implements OnInit {
 
@@ -34,6 +34,7 @@ export class AboutComponent implements OnInit {
   ]
   frontEndSkillItems: SkillModel[] = [];
   backEndSkillItems: SkillModel[] = [];
+  showArrow: boolean = false;
 
   //gauge chart settings
   gaugeType = "semi";
@@ -47,7 +48,11 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.showArrow = true;
+    }, 1000);
   }
+
   @HostListener("window:scroll", [])
   onWindowScroll() {
     let number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -57,11 +62,14 @@ export class AboutComponent implements OnInit {
         this.backEndSkillItems = this.skillItems.filter(x => x.tag === 1);
       }, 300);
     } 
-    // else if (number < 10) {
-    // }
   }
 
   scroll(element: HTMLElement){
-    element.scrollIntoView({ behavior: 'smooth', block: 'center',})
+    // element.scrollIntoView({ behavior: 'smooth', block: 'center',})
+    let bounds = element.getBoundingClientRect();
+    window.scrollTo({
+      top: bounds.top - 50,
+      behavior: 'smooth'
+    });
   }
 }

@@ -13,6 +13,7 @@ export class ContactComponent implements OnInit {
   emailForm: FormGroup;
   showErrors: boolean = false;
   sending: boolean = false;
+  invalidEmail: boolean = false;
 
   constructor(
     private _fb: FormBuilder, 
@@ -28,9 +29,24 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  scroll(element: HTMLElement){
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  CheckEmail(value){
+    let emailRegex = new RegExp(/^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$/);
+    if(!emailRegex.test(value)){
+      this.invalidEmail = true;
+    }else{
+      this.invalidEmail = false;
+    }
+    console.log(this.invalidEmail);
   }
+
+  scroll(element: HTMLElement){
+    let bounds = element.getBoundingClientRect();
+    window.scrollTo({
+      top: bounds.top - 130,
+      behavior: 'smooth'
+    });
+  }
+
   OpenSocial(social: string){
     let url = '';
     if(social == 'facebook')
@@ -39,6 +55,7 @@ export class ContactComponent implements OnInit {
       url = 'https://www.linkedin.com/in/ali-sakr-alarby/';
     window.open(url, '_blank');
   }
+
   Submit(){
     if(this.emailForm.invalid){
       this.emailForm.setErrors({invalid: true});
@@ -70,4 +87,5 @@ export class ContactComponent implements OnInit {
       })
     } 
   }
+
 }

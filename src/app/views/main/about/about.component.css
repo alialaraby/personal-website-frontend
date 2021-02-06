@@ -5,31 +5,23 @@
 .text-about{
     top: 5% !important;
 }
-.intro-p{
-    text-transform: capitalize;
-    color: black !important;
-    padding-left: 70px;
-    padding-right: 70px;
-    letter-spacing: 1px;
-    font-size: 35px !important;
-}
 
-  @media (max-width: 768px){
-    .about-heading.page-heading{
-      height: 645px;
-    }
-    .text-about{
-      top: 2% !important;
-    }
-    .intro-p{
-      font-size: 30px !important;
-      padding-left: 25px;
-      padding-right: 25px;
-    }
-    .best-features h4{
-      margin-top: 20px;
-    }
+@media (max-width: 768px){
+  .about-heading.page-heading{
+    height: 645px;
   }
+  .text-about{
+    top: 2% !important;
+  }
+  .intro-p{
+    font-size: 30px !important;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .best-features h4{
+    margin-top: 20px;
+  }
+}
 
 .what-i-do p{
   font-size: 17px;
